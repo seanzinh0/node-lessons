@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" href="/img/cloudy.png">
+    <title>Weather</title>
+</head>
+<body>
+{{>navbar}}
+<div class="main-content">
+    {{>header}}
+    <p>Use this site to get your weather!</p>
+
+    <form>
+        <input placeholder="Location">
+        <div>
+            <label>
+                <input type="radio" name="units" value="f" checked>
+                Fahrenheit
+            </label>
+            <label>
+                <input type="radio" name="units" value="m">
+                Celsius
+            </label>
+        </div>
+        <button>Search</button>
+    </form>
+
+    <p id="message1"></p>
+    <p id="message2"></p>
+</div>
+
+{{>footer}}
+</body>
+</html>
