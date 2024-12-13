@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     const units = document.querySelector('input[name="units"]:checked').value;
     message1.textContent = "Loading...";
     message2.textContent = "";
-    fetch(`http://localhost:3000/weather?address=${location}&units=${units}`).then(response => response.json().then((data) => {
+    fetch(`/weather?address=${location}&units=${units}`).then(response => response.json().then((data) => {
         if(data.error) {
             message1.textContent = data.error;
         } else {
