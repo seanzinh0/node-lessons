@@ -31,7 +31,8 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: "About Me",
-        name: "Neil DeGrasse Tyson"
+        name: "Neil DeGrasse Tyson",
+        message: "Hi there! I am Neil DeGrasse Tyson! Welcome to my weather app!"
     });
 })
 
