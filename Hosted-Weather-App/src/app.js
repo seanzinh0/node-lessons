@@ -82,7 +82,7 @@ app.get("/products", (req, res) => {
 
 app.get("/help/*", (req, res) => {
     res.render('404', {
-        title: "404",
+        title: "Help - 404",
         message: "Help article not found",
         name: "Neil DeGrasse Tyson"
     })

@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: #333333;
     font-family: arial, sans-serif;
@@ -44,9 +50,16 @@ nav a {
     width: 250px;
 }
 
-input {
+input[type = text] {
     border: 1px solid #cccccc;
     padding: 8px;
+    width: 250px;
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
 }
 
 button {
@@ -55,4 +68,18 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+    width: 250px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 250px;
+}
+
+button:hover {
+    background: #333333;
+    border: 1px solid #333333;
 }
