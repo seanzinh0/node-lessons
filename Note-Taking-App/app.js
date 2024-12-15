@@ -7,7 +7,7 @@ const {listNotes, readNotes, readNote, editNote} = require("./notes");
 //customize yargs version
 yargs.version("1.1.0")
 
-//create add command
+//create add command that has a required title and body uses argv to get user input
 yargs.command({
     command: "add",
     describe: "Add a new note",
@@ -29,7 +29,7 @@ yargs.command({
 
 })
 
-//create remove command
+//create remove command that requires a title and uses argv to get title from user
 yargs.command({
     command: "remove",
     describe: "Remove a note",
@@ -45,7 +45,7 @@ yargs.command({
     }
 })
 
-//create read command
+//create read command that takes in a title using argv to read note
 yargs.command({
     command: "read",
     describe: "Read the note",
@@ -61,7 +61,7 @@ yargs.command({
     }
 })
 
-//create list command
+//create list command that has no requirements and just lists the notes using the function
 yargs.command({
     command: "list",
     describe: "List the notes",
@@ -70,6 +70,7 @@ yargs.command({
     }
 })
 
+//edit command that requires a title and edit to be inputted via argv
 yargs.command({
     command: "edit",
     describe: "Edit the note",
@@ -93,4 +94,5 @@ yargs.command({
 
 //add remove read list
 
+//parses the cli arguments
 yargs.parse()

@@ -1,8 +1,12 @@
+//select elements from the index page
 const form = document.querySelector("form");
 const search = document.querySelector("input");
 const message1 = document.querySelector("#message1");
 const message2 = document.querySelector("#message2");
 
+
+//add event listener for when form is submitted to change the search query
+//use location from the text input and checks what radio button is checked
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const location = search.value;

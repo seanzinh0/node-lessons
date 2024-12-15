@@ -1,3 +1,4 @@
+//require modules
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
@@ -19,6 +20,7 @@ hbs.registerPartials(partialsPath);
 //setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
+//setup endpoints for routes to render pages
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
@@ -41,6 +43,7 @@ app.get('/help', (req, res) => {
     });
 })
 
+//setup query request with the weather page to be able to get an address and units and use async js to get the info in form of object that we can use fetch to retrieve
 app.get("/weather", (req, res) => {
     if (!req.query.address) {
         return res.send({
@@ -68,6 +71,7 @@ app.get("/weather", (req, res) => {
     });
 })
 
+//practice from the video
 app.get("/products", (req, res) => {
     if (!req.query.search) {
         return res.send({
@@ -80,6 +84,7 @@ app.get("/products", (req, res) => {
     })
 })
 
+//two 404 pages one for handling help page errors and a general catch all
 app.get("/help/*", (req, res) => {
     res.render('404', {
         title: "Help - 404",
@@ -100,6 +105,7 @@ app.get("*", (req, res) => {
 // app.com/help
 // app.com/about
 
+//create a dynamic port to be able to deploy on render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
