@@ -84,3 +84,8 @@ button:hover {
     background: #333333;
     border: 1px solid #333333;
 }
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
