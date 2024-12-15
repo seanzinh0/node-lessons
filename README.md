@@ -7,6 +7,7 @@ Welcome to the Node Lessons repository! This project contains various Node.js ap
 ## Applications Included
 
 1. **Weather App**: A simple application that fetches weather data based on user input.
+   https://node-lessons-mb57.onrender.com/
 2. **Notes Taking App**: An application that allows users to create, read, update, and delete notes.
 3. **Language Detection Script**: A script that detects the language of a given text.
 
